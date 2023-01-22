@@ -94,7 +94,6 @@ keven1024-csdn:
               drop_saturate: 背景颜色寡淡
               black: 黑色高级遮罩
               line_45reg: 斜线遮罩
-              color_glitch: 故障毛刺遮罩(只支持图片)
             typesetting:
               title: 内容排版设置
               start: 左对齐
@@ -109,7 +108,10 @@ keven1024-csdn:
           background-image-list: 随机图片列表
           background-video-list: 随机视频列表
           background-list-help: 随机从列表里里抽取一个 图片/视频 进行展示
+          background-refresh: 显示刷新背景按钮
+          background-refresh-help: 在右上角显示刷新按钮, 点击后刷新随机背景
           background-fallback: 背景 图片/视频 加载占位图
+          background-webgl: 为背景 图片/视频 启用WebGL特效
         inspired-by: 灵感来自
         zhihu: '知乎严选文章'
         mcbbs: 'McBBS论坛'
