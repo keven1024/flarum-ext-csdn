@@ -1,0 +1,135 @@
+.keven1024 {
+  .flex {
+    display: flex;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .w-10 {
+    width: 10rem;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+  .items-center {
+    align-items: center;
+  }
+
+  .items-end {
+    align-items: end;
+  }
+
+  .gap-1 {
+    gap: 1rem;
+  }
+
+  .gap-2 {
+    gap: 2rem;
+  }
+
+  .my-0-5 {
+    margin: 0.5rem 0;
+  }
+
+  .label-title {
+    margin: 0 0 0.25rem 0;
+  }
+
+  .py-0-5 {
+    padding: 0.5rem 0;
+  }
+
+  .pr-0-25 {
+    padding-right: 0.25rem;
+  }
+
+  .m-0 {
+    margin: 0;
+  }
+
+  .ml-1 {
+    margin-left: 1rem;
+  }
+
+  .span-text {
+    font-size: smaller;
+    font-weight: lighter;
+    opacity: .75;
+    margin: 0 0.5rem;
+    align-items: end;
+  }
+
+  .object-item {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    //align-items: end;
+  }
+
+  .input-item {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .Button--error {
+    background: #ef4444;
+    color: #fff;
+  }
+
+  .Button-color {
+    height: 1.5rem;
+    width: 2.5rem;
+  }
+
+  .checkbox {
+    [type=checkbox]:checked {
+      background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg viewBox= '0 0 16 16' fill= '%23fff' xmlns= 'http://www.w3.org/2000/svg' %3E%3Cpath d= 'M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z' /%3E%3C/svg%3E);
+      background-color: currentColor;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border-color: transparent;
+      cursor: pointer;
+    }
+
+    input {
+      background-color: var(--control-bg);
+      border-radius: 0.25rem;
+      border-color: var(--control-color);
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+
+    label {
+      color: var(--control-color);
+      margin-left: 0.5rem;
+      font-size: .875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  .dlc-icon {
+    --size: 2rem;
+    border-radius: 1rem;
+    color: #fff;
+
+    &.error {
+      background: #f87171;
+    }
+
+    &.success {
+      background: #4ade80;
+    }
+  }
+}

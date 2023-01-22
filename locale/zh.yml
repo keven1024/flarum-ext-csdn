@@ -1,0 +1,153 @@
+keven1024-csdn:
+  # For more details on the format
+  # Checkout https://docs.flarum.org/extend/i18n/#appendix-a-standard-key-format
+  admin:
+    title: CSDN Plugin
+    desc: 一个对标CSDN的插件，集中文互联网恶心用户手段之大成，致力于让你的网站访问者感到恶心
+    permissions:
+      content-visibility: '谁可以不受限制地查看帖子内容'
+      floor-visibility: '谁可以不受限制查看所有楼层'
+    settings:
+      global:
+        title: 全局设置
+        content-visibility:
+          title: '帖子内容可见设置'
+          divisible: '不可见'
+          conditional: '只能看到部分'
+          visible: '可见'
+        content-visibility-conditional:
+          title: '隐藏一部分帖子内容'
+          help: '知乎盐选文章'
+          trigger-word-count: '触发隐藏的内容字数'
+          trigger-word-count-help: '帖子大于多少字触发'
+          hidden-word-count: '隐藏字数百分比'
+          hidden-word-count-help: '0-100，不需要加%'
+        content-visibility-tips:
+          title: 当帖子不可见时的提示
+          text: 提示内容
+          help: 可以在提示内容中使用 <b>$login</b> 来插入登录按钮 ,<b>$hide_num</b> 来插入被隐藏的字符数
+        content-visible-conditional:
+          title: '帖子内容显示额外条件'
+          divisible-copy-all: '禁止复制任何内容'
+          divisible-right-key: '禁止使用右键'
+          divisible-f12: '禁止F12控制台, 保存, 查看网页源码'
+          divisible-f12-tip: '打开控制台时的提示'
+          divisible-copy-code: '禁止复制代码'
+          divisible-copy-code-tip: '触发禁止复制代码时, 鼠标放置于代码框时的提示'
+          divisible-image: '禁止查看原图'
+          copy-add-copyright: '复制加上版权'
+          add-copyright-text: '版权文本'
+          add-copyright-text-help: '可以在上面版权文本中使用如下占位符, 自动填充对应内容. 帖子链接: <b>$url</b> 作者: <b>$author</b> 站点名: <b>$siteName</b>'
+          divisible-event: '触发上述事件时弹出提示'
+          divisible-event-tips:
+            title: '弹出提示内容自定义'
+            type:
+              title: '提示状态'
+              success: '成功'
+              warning: '警告'
+              error: '危险'
+            mode:
+              title: '提示类型'
+              modal: '弹窗提示'
+              alert: '吐司提示'
+            tip: 提示文本
+            is_custom: 自定义弹窗内容
+            custom_html: 弹窗内容(HTML)
+            add_event_tip: 添加弹窗触发事件
+            alert:
+              error1: '存在重复事件或者未选择，添加失败'
+        floor-visibility:
+          title: '楼层可见设置'
+          divisible: '不可见'
+          conditional: '只能看到部分'
+          visible: '可见'
+        floor-visibility-conditional:
+          title: '隐藏一部分楼层'
+          trigger-floor-count: '触发隐藏的楼层字数'
+          trigger-floor-count-help: '楼层大于多少开始隐藏'
+        floor-visibility-tips:
+          title: 当楼层不可见时的提示
+          main-title-text: 主标题
+          sub-title-text: 子标题
+          title-text-help: 支持使用html来编写主标题与子标题，内置了两个bold与pill的css class，可以使用 <b class="bold">加粗字体</b> 的方式来使用
+          button-lists:
+            title: 标题下方按钮组
+            event:
+              title: 按钮事件
+              login: 登录
+              signup: 注册
+              url: 跳转URL
+              modal: 弹窗
+            class:
+              title: 按钮外观
+            label: 按钮文本
+            href: URL地址
+            custom_html: 弹窗内容(HTML)
+          main-button-class: 主按钮风格
+          sub-button-class: 次按钮风格
+          content:
+            mask:
+              title: 背景遮罩
+              none: 无
+              text_blur: 字体后面模糊(改善偏白背景下字体难以辨认)
+              drop_blur: 背景模糊
+              drop_saturate: 背景颜色寡淡
+              black: 黑色高级遮罩
+              line_45reg: 斜线遮罩
+              color_glitch: 故障毛刺遮罩(只支持图片)
+            typesetting:
+              title: 内容排版设置
+              start: 左对齐
+              center: 居中
+              end: 右对齐
+          background:
+            title: 背景设置
+            video: 视频
+            image: 图片
+            color: 颜色
+          background-color-list: 随机颜色列表
+          background-image-list: 随机图片列表
+          background-video-list: 随机视频列表
+          background-list-help: 随机从列表里里抽取一个 图片/视频 进行展示
+          background-fallback: 背景 图片/视频 加载占位图
+        inspired-by: 灵感来自
+        zhihu: '知乎严选文章'
+        mcbbs: 'McBBS论坛'
+        csdn: 'CSDN博文'
+        bilibili: 'Bilibili文章'
+        tieba: '百度贴吧'
+        mydigit: '数码之家'
+      bbcode:
+        title: BBCode设置
+        group-to-see: '允许发帖使用xx用户组可见的BBCode(BBCode指定权限组)'
+        conditional-to-see: '允许发帖使用特定操作可见的内容(BBCode指定回复可见，注册大于xx天可见)'
+      default:
+        floor_main_title_text: "你好<b class=\"bold\">世界</b>"
+        floor_sub_title_text: "这是一个<b class=\"pill\">子标题</b>"
+        floor-background: 'color'
+        floor_main_button_class: 'filled'
+        floor_sub_button_class: 'light'
+        floor_content_typesetting: 'center'
+        floor_content_mask: 'none'
+        floor_background_colors_list: 'WyJiYWNrZ3JvdW5kOnZhcigtLW11dGVkLWNvbG9yKTsiXQ=='
+        floor_background_images_list: 'WyIvL2ltZy5mdWRhb3l1YW4uaWN1L2FwaS8xL3JhbmRvbT9zY2FsZV9taW49MS41JndlYnA9dHJ1ZSZtZD1mYWxzZSZmb3JtYXQ9MzAyIl0='
+        floor_background_videos_list: 'WyJodHRwczovL2ludGVyYWN0aXZlLWV4YW1wbGVzLm1kbi5tb3ppbGxhLm5ldC9tZWRpYS9jYzAtdmlkZW9zL2Zsb3dlci53ZWJtIl0='
+        divisible_f12_tip: '老板你长得真帅!放过孩子吧QAQ'
+        divisible_copy_code_tip: '登陆后复制'
+        add_copyright_text: '# 商业转载请联系作者获得授权，非商业转载请注明出处。\n# For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source.\n# 协议(License)：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)\n# 作者(Author)：$author\n# 链接(URL)：$url\n# 来源(Source)：$siteName'
+        content_visibility_tips_text: "$login后查看剩余$hide_num个字"
+        divisible_event_tips: "eyJkZWZhdWx0Ijp7InRpcCI6IueZu+mZhuWQjuaJjeiDveWkjeWItiIsInR5cGUiOiJzdWNjZXNzIiwibW9kZSI6ImFsZXJ0In19"
+        floor_background_fallback: '//raw.githubusercontent.com/Fuukei/Sakurairo_Vision/main/load_svg/outload.svg'
+        floor_button_list: 'W3siZXZlbnQiOiJsb2dpbiIsImNsYXNzIjoiZmlsbGVkIn0seyJldmVudCI6InNpZ251cCIsImNsYXNzIjoibGlnaHQifV0='
+      ref:
+        add: 添加
+        del: 删除
+        input: 输入
+        default: 默认
+        no_install_dlc: 您需要安装并启用 {xx} DLC才能使用该功能
+        is_install_dlc: 已安装并启用 {xx} DLC , <a>前往设置</a>
+      alert:
+        not_be_deleted: 该项目不可删除
+        copied_clipboard: 已复制到剪贴板
+  forum:
+

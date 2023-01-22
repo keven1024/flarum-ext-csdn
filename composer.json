@@ -1,0 +1,84 @@
+{
+    "name": "keven1024/flarum-ext-csdn",
+    "description": "A benchmark for the CSDN plug-in, the great success of the China Internet shit, Make your site visitors feel sick",
+    "keywords": [
+        "flarum",
+        "csdn"
+    ],
+    "type": "flarum-extension",
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "flarum/core": "^1.2.0",
+        "ext-json": "*"
+    },
+    "authors": [
+        {
+            "name": "keven1024",
+            "email": "keven@fudaoyuan.icu",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Keven1024\\CSDN\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Keven CSDN",
+            "category": "",
+            "icon": {
+                "name": "fas fa-copyright",
+                "backgroundColor": "#fc5531",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "keven1024/flarum-ext-csdn-image",
+                "keven1024/flarum-ext-csdn-webgl"
+            ]
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "backendTesting": true,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Keven1024\\CSDN\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    }
+}
