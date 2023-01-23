@@ -28,6 +28,8 @@ class ForumScope
         $attributes["floorVisibilityBackgroundVideosList"] = json_decode($settings->get(Cool::addPrefix('floor_background_videos_list'), base64_decode($translator->trans(Cool::addTrans('floor_background_videos_list')))));
         $attributes["floorVisibilityButtonList"] = json_decode($settings->get(Cool::addPrefix('floor_button_list'), base64_decode($translator->trans(Cool::addTrans('floor_button_list')))));
         $attributes["floorVisibilityBackgroundFallback"] = $settings->get(Cool::addPrefix('floor_background_fallback'), $translator->trans(Cool::addTrans('floor_background_fallback')));
+        $attributes["floorVisibilityBackgroundRefresh"] = Cool::toSerialize($settings->get(Cool::addPrefix('floor_background_refresh'), '0'));
+        $attributes["floorVisibilityBackgroundWebGL"] = Cool::toSerialize($settings->get(Cool::addPrefix('floor_background_webgl'), '0'));
 
 //        // 内容可见权限
         $attributes["contentVisibilityDivisibleCopyAll"] = Cool::toSerialize($settings->get(Cool::addPrefix('divisible_copy_all'), '0'));
