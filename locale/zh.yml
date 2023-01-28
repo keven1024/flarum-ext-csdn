@@ -88,7 +88,6 @@ keven1024-csdn:
           content:
             mask:
               title: 背景遮罩
-              none: 无
               text_blur: 字体后面模糊(改善偏白背景下字体难以辨认)
               drop_blur: 背景模糊
               drop_saturate: 背景颜色寡淡
@@ -111,6 +110,13 @@ keven1024-csdn:
           background-refresh: 显示刷新背景按钮
           background-refresh-help: 在右上角显示刷新按钮, 点击后刷新随机背景
           background-fallback: 背景 图片/视频 加载占位图
+          background-effect:
+            title: 背景效果
+            parallax: 视差效果
+            mouse3d: 3D卡片效果
+            scale:
+              h: 背景放大高度比例
+              w: 背景放大宽度比例
           background-webgl: 为背景 图片/视频 启用WebGL特效
         inspired-by: 灵感来自
         zhihu: '知乎严选文章'
@@ -144,6 +150,7 @@ keven1024-csdn:
       ref:
         add: 添加
         del: 删除
+        none: 无
         input: 输入
         default: 默认
         no_install_dlc: 您需要安装并启用 {xx} DLC才能使用该功能
@@ -152,4 +159,7 @@ keven1024-csdn:
         not_be_deleted: 该项目不可删除
         copied_clipboard: 已复制到剪贴板
   forum:
+    tip:
+      refresh: "点击刷新背景"
+      mouse3d: "开启/关闭 3D卡片效果"
 

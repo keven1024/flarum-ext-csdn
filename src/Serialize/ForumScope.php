@@ -30,6 +30,10 @@ class ForumScope
         $attributes["floorVisibilityBackgroundFallback"] = $settings->get(Cool::addPrefix('floor_background_fallback'), $translator->trans(Cool::addTrans('floor_background_fallback')));
         $attributes["floorVisibilityBackgroundRefresh"] = Cool::toSerialize($settings->get(Cool::addPrefix('floor_background_refresh'), '0'));
         $attributes["floorVisibilityBackgroundWebGL"] = Cool::toSerialize($settings->get(Cool::addPrefix('floor_background_webgl'), '0'));
+        $attributes["floorVisibilityBackgroundEffect"] = $settings->get(Cool::addPrefix('floor_background_effect'), 'none');
+        $attributes["floorVisibilityBackgroundParallaxHScale"] = intval($settings->get(Cool::addPrefix('floor_background_parallax_hscale'), 10));
+        $attributes["floorVisibilityBackgroundMouse3dHScale"] = intval($settings->get(Cool::addPrefix('floor_background_mouse3d_hscale'), 10));
+        $attributes["floorVisibilityBackgroundMouse3dWScale"] = intval($settings->get(Cool::addPrefix('floor_background_mouse3d_wscale'), 10));
 
 //        // 内容可见权限
         $attributes["contentVisibilityDivisibleCopyAll"] = Cool::toSerialize($settings->get(Cool::addPrefix('divisible_copy_all'), '0'));

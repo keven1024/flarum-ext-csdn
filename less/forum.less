@@ -54,55 +54,6 @@
     backdrop-filter: saturate(0.5);
   }
 
-  &.mask-color-glitch {
-    //&:extend(~.csdn);
-    .before, .after {
-      mix-blend-mode: screen;
-      background-position: center;
-      background-repeat: no-repeat;
-      //background: url(//img.fudaoyuan.icu/api/1/random?scale_min=1.5&webp=true&md=false&format=302) no-repeat center center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      opacity: .7;
-      background-size: cover;
-      //border-radius: 10px;
-      top: 0;
-    }
-
-    .before {
-      transform: scale(1.025) translate(3px, 1px);
-
-    }
-
-    .after {
-      transform: scale(1.025) translate(-2px, -2px);
-
-    }
-
-    img {
-      mix-blend-mode: screen;
-
-      opacity: .7;
-    }
-
-    .loaded {
-      &.after {
-        filter: url(#r);
-      }
-
-      &.before {
-        filter: url(#b);
-      }
-    }
-
-    img.loaded {
-      filter: url(#g);
-    }
-
-  }
-
   .content {
     padding: 3.75rem 1rem 2.5rem;
     display: flex;
@@ -211,24 +162,62 @@
     }
   }
 
-  .refresh-button {
+  .top-right-buttons {
     position: absolute;
     top: 0;
     right: 0;
     margin: .25rem .5rem;
-    padding: .5rem .75rem;
-    border-radius: 10rem;
-    cursor: pointer;
+    display: flex;
 
-    &:hover {
-      background: rgba(0, 0, 0, .1);
-      backdrop-filter: blur(10px);
-    }
+    .button {
+      padding: .75rem;
+      border-radius: 10rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    &.animation-refresh {
-      animation: 0.8s ease-in-out animation-refresh;
+      &:hover {
+        background: rgba(148, 163, 184, 0.5);
+        backdrop-filter: blur(1rem);
+
+        .hover {
+          display: inline-block;
+        }
+      }
+
+      &.animation-refresh {
+        animation: 0.8s ease-in-out animation-refresh;
+      }
+
+      .slash {
+        position: absolute;
+        mix-blend-mode: difference;
+        font-size: 1rem;
+        visibility: hidden;
+      }
+
+      &.disable {
+        .slash {
+          visibility: visible;
+        }
+      }
+
+      .hover {
+        display: none;
+        position: absolute;
+        bottom: -1.95rem;
+        right: 0;
+        padding: 0.25rem 0.5rem;
+        background: rgba(148, 163, 184, 0.5);
+        border-radius: 5rem;
+        backdrop-filter: blur(1rem);
+        word-break: keep-all;
+        white-space: nowrap;
+      }
     }
   }
+
 }
 
 @keyframes animation-refresh {
