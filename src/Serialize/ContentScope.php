@@ -71,7 +71,7 @@ class ContentScope
                 $csdn_image = $this->extensions->isEnabled('keven1024-csdn-image');
                 if ($divisible_image && $csdn_image && class_exists("Keven1024\CSDNImage\Process\DivisibleImage")) {
                     $image = new DivisibleImage($this->uploadDir, $settings, $translator);
-                    [$contentHtml, $attributes] = $image->divisible_image($contentHtml, $attributes);
+                    [$contentHtml, $attributes] = $image->divisible_image($contentHtml, $attributes, $post->id);
                 }
 
 
