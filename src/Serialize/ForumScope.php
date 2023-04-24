@@ -49,8 +49,8 @@ class ForumScope
         $attributes["contentVisibilityDivisibleEvent"] = Cool::toSerialize($settings->get(Cool::addPrefix('divisible_event'), '0'));
         $attributes["contentVisibilityDivisibleEventTips"] = json_decode($settings->get(Cool::addPrefix('divisible_event_tips'), base64_decode($translator->trans(Cool::addTrans('divisible_event_tips')))));
 
-        $attributes["canSeeFloorAll"] = $serializer->getActor()->can('csdnFloorVisibility');
-        $attributes["canSeePostBody"] = $serializer->getActor()->can('csdnContentVisibility');
+        $attributes["canSeeFloorAll"] = $serializer->getActor()->can('keven1024.csdnFloorVisibility');
+        $attributes["canSeePostBody"] = $serializer->getActor()->can('keven1024.csdnContentVisibility');
         return $attributes;
     }
 }
